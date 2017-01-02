@@ -81,9 +81,9 @@ def makefile():
         if reset != "All one register" and reset != "All zero register":
             while k < len(numberString):
                 #checks if field is unused
-                if charString[k] == '.':
+                if charString[k] == '.' or charString[k] == '0':
                     for s in range(k,len(numberString)):
-                        if charString[s] != '.' and charString[s] != ' ' or s == len(numberString) - 1:
+                        if charString[s] != '.' and charString[s] != '0' and charString[s] != ' ' or s == len(numberString) - 1:
                             if s == len(numberString) - 1:
                                 if amountUnused == 1:
                                     file.write("field:UNUSED:" + str(s-k + 1 - amountWhiteSpace) + "\n")
