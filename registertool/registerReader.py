@@ -57,7 +57,15 @@ def makefile():
         for char in formatString:
             if char == '\n':
                 numberString = formatString[0:j]
-                charString = formatString[j+1:len(formatString)]
+                print(numberString)
+                i = j + 1
+                for charr in formatString[i:len(formatString)]:
+                    if charr != " ":
+                        charString = formatString[i:i+j]
+                        break
+                    i = i+1
+                #charString = formatString[j+1:j+1+j]
+                print(charString)
                 break
             j = j+1
 
@@ -79,7 +87,7 @@ def makefile():
         amountUnused = 1
         reset = rowsforTable[5].cells[3].text
         if reset != "All one register" and reset != "All zero register":
-            while k < len(numberString):
+            while k < len(charString):
                 #checks if field is unused
                 if charString[k] == '.' or charString[k] == '0':
                     for s in range(k,len(numberString)):
@@ -103,19 +111,20 @@ def makefile():
                             amountWhiteSpace = amountWhiteSpace + 1
                 #ignores if blank space    
                 elif charString[k] != ' ':        
-                    for s in range(k,len(numberString)):
+                    for s in range(k,len(charString)):
                         #finds when the character is not repeated, and a new field starts, but ignores blank spaces
-                        if charString[s] != charString[k] and charString[s] != ' ':
+                        if (charString[s] != charString[k] and charString[s] != ' '):
                                 file.write("field:" + charString[k] + ":" + str(s-k - amountWhiteSpace) + "\n")
                                 k = s - 1
                                 amountWhiteSpace = 0
                                 break
+                        if s == len(charString) - 1:
+                                print(charString[len(charString) - 1])
+                                file.write("field:" + charString[k] + ":" + str(s-k  + 1 - amountWhiteSpace) + "\n")
+                                k = s
+                                break
                         if charString[s] == ' ':
                             amountWhiteSpace = amountWhiteSpace + 1
-                        if s == len(numberString) - 1:
-                            file.write("field:" + charString[k] + ":" + str(s-k  + 1 - amountWhiteSpace) + "\n")
-                            k = s
-                            break
                 k= k+1
         #finishes up the register
         file.write("vendorExtensions:NULL" + "\n")

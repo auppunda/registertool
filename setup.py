@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='registertool',
-      version='0.1',
+      version='0.3',
       description='Using docx, I take the register tables from a docx file and write into text file',
       url='http://github.com/auppunda/registertool',
       author='Ankith Uppunda',
