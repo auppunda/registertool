@@ -119,7 +119,7 @@ def makefile():
                                 amountWhiteSpace = 0
                                 break
                         if s == len(charString) - 1:
-                                print(charString[len(charString) - 1])
+                                #print(charString[len(charString) - 1])
                                 file.write("field:" + charString[k] + ":" + str(s-k  + 1 - amountWhiteSpace) + "\n")
                                 k = s
                                 break
