@@ -57,7 +57,7 @@ def makefile():
         for char in formatString:
             if char == '\n':
                 numberString = formatString[0:j]
-                print(numberString)
+                #print(numberString)
                 i = j + 1
                 for charr in formatString[i:len(formatString)]:
                     if charr != " ":
@@ -65,7 +65,7 @@ def makefile():
                         break
                     i = i+1
                 #charString = formatString[j+1:j+1+j]
-                print(charString)
+                #print(charString)
                 break
             j = j+1
 
