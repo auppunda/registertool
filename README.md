@@ -25,5 +25,5 @@ python package for writing to text file from table
 
 9) After it will ask you the path you want to save it to, and the name of the file, don't put .txt at the end because the code will add it just put a path like C:/Users/p, and the code will append _register to the end of p, and create and save output to p_register.txt
 
-_10)p_register.txt contains the registers put into a text file
+10)p_register.txt contains the registers put into a text file
 
