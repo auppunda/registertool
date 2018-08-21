@@ -1,13 +1,13 @@
 # registertool
 python package for writing to text file from table
 
-1)download package onto computer
+1) download package onto computer
 
-2)on cmd or terminal go to the path of package
+2) on cmd or terminal go to the path of package
 
-3)If you have python(3.4) and pip run command "pip install ." to install package onto computer
+3) If you have python(3.4) and pip run command "pip install ." to install package onto computer
 
-4)If problems arrize:
+4) If problems arrize:
   -If lxml doesn't work
     -check the python version
     -stack overflow
@@ -25,5 +25,5 @@ python package for writing to text file from table
 
 9) After it will ask you the path you want to save it to, and the name of the file, don't put .txt at the end because the code will add it just put a path like C:/Users/p, and the code will append _register to the end of p, and create and save output to p_register.txt
 
-10)p_register.txt contains the registers put into a text file
+10) p_register.txt contains the registers put into a text file
 
